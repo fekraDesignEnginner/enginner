@@ -1,0 +1,203 @@
+/* General styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('12.jpeg'); 
+    background-size: cover; /* يجعل الصورة تغطي كامل الشاشة */
+    background-position: center; /* يجعل الصورة تظهر في وسط الشاشة */
+    background-attachment: fixed; /* يجعل الصورة ثابتة أثناء التمرير */
+    color: #444;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Typography */
+h1, h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3b6978;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Header */
+.site-header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    color: #f7f7f7;
+}
+
+/* Login and Service containers */
+.login-container, .services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-box input, .btn {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Login Box */
+.login-box {
+    width: 100%;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(74, 96, 107, 0.1);
+    color: #444;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.login-box input:focus {
+    outline: none;
+    background: rgba(74, 96, 107, 0.2);
+    box-shadow: 0 0 8px rgba(74, 96, 107, 0.4);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(84, 250, 176, 0.5);
+}
+
+/* Notification bar */
+.notification-bar {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background: #fcfdfe;
+    color: #444;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: top 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+}
+
+.notification-bar.show {
+    top: 20px;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Service Buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    width: 140px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: #444;
+}
+
+.buttons .btn:hover {
+    background: linear-gradient(135deg, #96e6a1, #d4fc79);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 252, 121, 0.5);
+}
+
+/* Service Details */
+.details {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(129, 74, 202, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #f9f9f9;
+}
+
+.details p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+/* تعديل ترتيب الأزرار ليكون عرضي */
+.services-container .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: row; /* تغيير من عمودي إلى أفقي */
+}
+
+/* إضافة بعض التعديلات لتخصيص الزر بشكل عرضي */
+.buttons .btn {
+    width: auto; /* إزالة العرض الثابت لجعل الأزرار تناسب العرض */
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: #444;
+}
+
+/* تعديل عرض العناصر عند زيادة حجم الشاشة */
+@media screen and (max-width: 768px) {
+    .services-container .buttons {
+        flex-direction: column; /* الرجوع إلى العمودي على الأجهزة الصغيرة */
+    }
+}

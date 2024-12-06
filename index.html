@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eltorky Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Eltorky Services</h1>
+        <!-- Notification bar -->
+        <div id="notification-bar" class="notification-bar"></div>
+    </header>
+    
+    <div class="login-container" id="login-container">
+        <h2>Welcome to Eltorky</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+            
+            <button type="submit" class="btn">Login</button>
+            <p id="login-message"></p>
+        </form>
+    </div>
+
+    <div class="services-container" id="services-container" style="display: none;">
+        <h2>Welcome to Eltorky Services</h2>
+        <div class="buttons">
+            <!-- LPro Max Services -->
+            <button class="btn" onclick="showServiceDetails('LPro Max iPhone 6S', 16)">LPro Max iPhone 6S</button>
+            <button class="btn" onclick="showServiceDetails('LPro Max iPhone 7/7+', 24)">LPro Max iPhone 7/7+</button>
+            <button class="btn" onclick="showServiceDetails('LPro Max iPhone 8/8+', 25)">LPro Max iPhone 8/8+</button>
+            <button class="btn" onclick="showServiceDetails('LPro Max iPhone X', 33)">LPro Max iPhone X</button>
+            
+            <!-- iCloud Worldwide -->
+            <button class="btn" onclick="showServiceDetails('iCloud WorldWide Clean', 450)">iCloud WorldWide Clean</button>
+
+            <!-- iRemove Tools -->
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (All iPads After 2017)', 15)">iRemove Tools iCloud Bypass (iPads After 2017)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (All iPads Before 2017)', 21)">iRemove Tools iCloud Bypass (iPads Before 2017)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (iPhone 5s)', 4.5)">iRemove Tools iCloud Bypass (iPhone 5s)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (iPhone 6, 6+)', 8)">iRemove Tools iCloud Bypass (iPhone 6, 6+)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (iPhone 5SE, 6s, 6s Plus)', 13)">iRemove Tools iCloud Bypass (iPhone 5SE, 6s, 6s Plus)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (iPhone 7, 7 Plus)', 19)">iRemove Tools iCloud Bypass (iPhone 7, 7 Plus)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (iPhone 8, 8 Plus)', 26)">iRemove Tools iCloud Bypass (iPhone 8, 8 Plus)</button>
+            <button class="btn" onclick="showServiceDetails('iRemove Tools iCloud Bypass (iPhone X)', 34)">iRemove Tools iCloud Bypass (iPhone X)</button>
+
+            <!-- Apple Checks -->
+            <button class="btn" onclick="showServiceDetails('Apple IMEI/SN Checker', 2)">Apple IMEI/SN Checker</button>
+
+            <!-- FRP Services -->
+            <button class="btn" onclick="showServiceDetails('Samsung FRP Remove', 7.5)">Samsung FRP Remove</button>
+            <button class="btn" onclick="showServiceDetails('MI FRP Remove', 1)">MI FRP Remove</button>
+            <button class="btn" onclick="showServiceDetails('Honor FRP Key Reset', 45)">Honor FRP Key Reset</button>
+
+            <!-- MDM Remove Services -->
+            <button class="btn" onclick="showServiceDetails('Tecno/Infinix MDM Remove (Team 2)', 4)">Tecno/Infinix MDM Remove (Team 2)</button>
+            <button class="btn" onclick="showServiceDetails('Tecno/Infinix MDM Unlock (Team 1)', 5.5)">Tecno/Infinix MDM Unlock (Team 1)</button>
+
+            <!-- Mi Account Unlock -->
+            <button class="btn" onclick="showServiceDetails('Mi Account Unlock (Oman)', 6)">Mi Account Unlock (Oman)</button>
+            <button class="btn" onclick="showServiceDetails('Mi Account Unlock (Ukraine)', 36)">Mi Account Unlock (Ukraine)</button>
+            <button class="btn" onclick="showServiceDetails('Mi Account Unlock (Morocco)', 7.5)">Mi Account Unlock (Morocco)</button>
+            <button class="btn" onclick="showServiceDetails('Mi Account Unlock (KSA)', 8.5)">Mi Account Unlock (KSA)</button>
+            <button class="btn" onclick="showServiceDetails('Mi Account Unlock (Turkey)', 22)">Mi Account Unlock (Turkey)</button>
+            <button class="btn" onclick="showServiceDetails('Mi Account Unlock (Japan)', 18.5)">Mi Account Unlock (Japan)</button>
+
+            <!-- Oppo, Realme, OnePlus Services -->
+            <button class="btn" onclick="showServiceDetails('Oppo NCK Codes', 10)">Oppo NCK Codes</button>
+            <button class="btn" onclick="showServiceDetails('Realme 172 Digit Code (China)', 9)">Realme 172 Digit Code (China)</button>
+            <button class="btn" onclick="showServiceDetails('Realme 172 Digit Code (WW)', 12.5)">Realme 172 Digit Code (WW)</button>
+
+            <!-- School Tablet Format -->
+            <button class="btn" onclick="showServiceDetails('School Tablet Format (T585, T505, T509)', 5)">School Tablet Format</button>
+        </div>
+        <div id="service-details" class="details">
+            <h2>Service Details</h2>
+            <p id="service-name">Service: </p>
+            <p id="service-price">Price: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
